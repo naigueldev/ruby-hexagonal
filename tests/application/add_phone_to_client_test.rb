@@ -1,6 +1,6 @@
 require "minitest/autorun"
 require "./tests/test_helper"
-require "./adapters/client_in_memory_repository"
+require "./adapters/repositories/client/client_in_memory_repository"
 require "./application/add_phone_to_client"
 require "./application/dto/add_phone_to_client_dto"
 require "./domain/client"
