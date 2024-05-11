@@ -1,4 +1,4 @@
-require_relative "./interfaces/client_interface"
+require "./domain/interfaces/client_interface"
 
 class Client < ClientInterface
   attr_accessor :id, :name, :phones
