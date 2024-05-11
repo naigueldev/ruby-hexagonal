@@ -18,7 +18,8 @@ To get started with this project, simply clone the repository and explore the so
 git clone https://github.com/naigueldev/ruby-hexagonal.git
 cd ruby-hexagonal
 bundle install
-bundle exec rspec # Run tests
+
+ruby path/to/test_file.rb # Run test
 ```
 
 ## Contributing
