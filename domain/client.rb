@@ -1,4 +1,5 @@
 require_relative "./interfaces/client_interface"
+require_relative "./phone"
 
 class Client < ClientInterface
   attr_accessor :id, :name, :phones
@@ -6,7 +7,7 @@ class Client < ClientInterface
   def initialize(id:, name:)
     @id = id
     @name = name
-    @phones = Array.new
+    @phones = Array.new()
   end
 
   def add_phone(phone:)
