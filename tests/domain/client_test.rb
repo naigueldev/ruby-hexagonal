@@ -13,15 +13,17 @@ class ClientTest < Minitest::Test
     assert_equal(expected_phone_number, client.phones[0].phone_number)
   end
 
-  def skip_test_remove_phone
-    client = Client.new(id: 1, name: "Fake Name")
-    client.add_phone(phone: "55999887766")
+  def test_remove_phone
+    phone_one = "55999887766"
+    phone_two = "55991827364"
 
-    client = Client.new(id: 2, name: "Fake Name Two")
-    client.add_phone(phone: "55991827364")
+    client = Client.new(id: 1, name: "Fake Name")
+
+    client.add_phone(phone: Phone.new(id: 1, phone_number: phone_one))
+    client.add_phone(phone: Phone.new(id: 2, phone_number: phone_two))
 
     client.remove_phone(phone_id: 1)
 
-    assert_equal(["55991827364"], client.phones)
+    assert_equal(phone_two, client.phones[0].phone_number)
   end
 end

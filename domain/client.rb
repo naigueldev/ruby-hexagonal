@@ -1,5 +1,4 @@
 require_relative "./interfaces/client_interface"
-require_relative "./phone"
 
 class Client < ClientInterface
   attr_accessor :id, :name, :phones
