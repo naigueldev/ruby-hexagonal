@@ -8,5 +8,6 @@ class CreateClient
   def execute(dto:)
     client = Client.new(id: dto.id, name: dto.name)
     @client_repository.save(client: client)
+    client
   end
 end

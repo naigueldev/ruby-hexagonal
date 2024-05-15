@@ -1,6 +1,4 @@
-require "./domain/phone"
-
-class AddPhoneToClient
+class RemovePhoneFromClient
   def initialize(client_repository:)
     @client_repository = client_repository
   end
@@ -8,7 +6,7 @@ class AddPhoneToClient
   def execute(dto:)
     client = @client_repository.findById(id: dto.client_id)
 
-    client.add_phone(phone: Phone.new(id: dto.phone_id, phone_number: dto.phone_number))
+    client.remove_phone(phone_id: dto.phone_id)
 
     @client_repository.save(client: client)
 
